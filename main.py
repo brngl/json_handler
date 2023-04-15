@@ -6,13 +6,16 @@ def deserialize():
 
     data = json.load(f)
 
-    print("\n\n")
-    print(data['batters']['batter'][0])
-    print("\n\n")
+    ret = data['batters']['batter'][0]
     
     f.close()
+
+    return ret
 
 def serialize():
     pass
 
-deserialize()
+data = deserialize()
+print("\n\n")
+print(data)
+print("\n\n")
